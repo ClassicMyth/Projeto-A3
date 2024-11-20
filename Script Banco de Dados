@@ -1,0 +1,15 @@
+CREATE DATABASE server_a3;
+USE server_a3;
+
+Create table tb_usuario(
+codusu int primary key auto_increment, nomeusu varchar(200) not null,
+emailusu varchar(200), senhausu varchar(200) default "12345", admusu bool default false 
+); 
+
+insert into tb_usuario
+(nomeusu, emailusu) values
+("adm", "adm@adm");
+
+DELETE FROM tb_usuario WHERE codusu=0; -- <---- Deletar uma linha da tabela!
+
+select * from tb_usuario;
